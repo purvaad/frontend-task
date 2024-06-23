@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  
+  <title>Intro component with sign up form</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="main">
+    <section class="hero-section_body">
+      <div class="container">
+        <div class="hero__main">
+          <div class="hero__left">
+            <div class="hero__left-content">
+            <h1>
+              Learn to code by <br>watching others
+            </h1>
+            <p>
+              See how experienced developers solve problems in real-time.<br> 
+              Watching scripted tutorials is great, but understanding how <br> 
+              developers think is invaluable. 
+            </p>
+          </div>
+        </div>
+
+          <div class="hero__right">
+            <div class="hero__right-content">
+              <div class="box"> 
+                <span class="bold-text">Try it free 7 days </span>then $20/mo. thereafter
+              </div>
+              <div class="content-form">
+                <div class="form-inner">
+                  <form action="#" > 
+                    <div class="form-input">
+                      <input type="text" id="first-name" name="first-name" placeholder="First Name">
+                      <span class="error-text" id="fname-text"></span>
+                    </div>
+
+                    <div class="form-input">
+                      <input type="text" id="last-name" name="last-name" placeholder="Last Name">
+                      <span class="error-text" id="lname-text"></span>
+                    </div>
+
+                    <div class="form-input">
+                      <input type="email" id="email" name="email" placeholder="Email Address">
+                      <span class="error-text" id="email-text"></span>
+                    </div>
+
+                    <div class="form-input">
+                      <input type="password" id="password" name="password" placeholder="Password">
+                      <span class="error-text" id="password-text"></span>
+                    </div>
+                    <button id="submit" type="submit" class="button" onclick="click">  Claim your free trial </button>
+                    <p>By clicking the button, you are agreeing to our <span>Terms and Services</span></p>
+
+                  </form>
+                </div>
+              </div>
+            </div>
+        
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+
+      const submit = document.getElementById("submit");
+
+      const emailFormat = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+      const name = ["First Name cannot be empty", "Last Name cannot be empty", "Looks like this is not an email", "Password cannot be empty"];
+
+      submit.addEventListener("click", () => {
+        const input = document.querySelectorAll("input");
+        const text = document.querySelectorAll(".error-text");
+
+          for(let i = 0; i < input.length; i++) {
+              for(let i = 0; i < text.length; i++) {
+                if(input[i].value === "") {
+                  input[i].classList.add("error");
+                  text[i].innerHTML = name[i];
+              } else {
+                  input[i].classList.remove("error");
+                  text[i].innerHTML = "";
+              } 
+                  
+              if (i == 2 &&  !input[2].value.match(emailFormat)){
+                  input[i].classList.add("error");
+                  text[i].innerHTML = name[i];
+              }    
+          }
+        }
+      });
+
+    
+  </script>
+  
+   
+</body>
+</html>

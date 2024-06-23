@@ -1,0 +1,218 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    font-family: "Poppins", sans-serif;
+    background-color: rgb(24, 24, 35);
+    color: white;
+}
+
+.hero__container{
+    width: 100%;
+    height: 40vh;
+}
+
+.hero__main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgb(44,25,154) 5%, rgb(105, 35, 115) 100%);
+    background-size: cover;
+}
+
+.hero__header{
+    width: 600px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 200px;
+}
+
+.hero__header h1{
+    font-size: 40px;
+    letter-spacing: 10px;
+}
+.hero__header i{
+    width: 20px;
+    height: 20px;
+}
+
+.hero__todo{
+    width: 600px;
+    max-height: 500px;
+}
+
+form{
+    width: 100%;
+    height: 80px;
+}
+form input{
+    width: 100%;    
+    margin-top: 20px;
+    padding: 15px 30px;
+    border-radius: 5px;
+    background: rgb(38, 39, 59);
+    font-size: 16px;
+    color: white;
+    letter-spacing: 1px;
+    outline: none;
+    border: none;
+}
+input::placeholder{
+    letter-spacing: 1px;
+}
+
+.todo-list{
+    width: 100%;
+    max-height: 330px;
+    margin-top: 25px;
+}
+
+.todo-con{
+    width: 100%;
+    background-color: rgb(38, 39, 59);
+    border-radius: 5px 5px 0 0;
+
+}
+.todo-li{
+    display: flex;
+    background: rgb(38, 39, 59);
+    padding: 15px 10px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    font-size: 16px;
+    align-items: center;
+}
+.todo-li p{
+    width: 92%;
+    color: white;
+}
+.todo-li .check{
+    width: 20px;
+    height: 20px;
+    border: 1px solid rgb(97, 98, 125);
+    border-radius: 50%;
+    display: grid;
+    place-content: center;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.todo-li .check i{
+    transform: scale(0);
+    transition: all 0.3s ease;
+}
+.todo-li .close{
+    background: transparent;
+    border: none;
+    outline: none;
+    opacity: 0;
+    transition: all 0.4s ease;
+    cursor: pointer;
+    color: rgb(61, 63, 82);
+}
+
+.todo-li:hover .close{
+    opacity: 5;
+}
+
+.line{
+    width: 100%;
+    background: rgb(61, 63, 82);
+    height: 0.9px;
+}
+
+.todo-info{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    color: hsl(234, 11%, 52%);
+    padding: 15px 10px;
+    background: hsl(235, 24%, 19%);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    cursor: pointer;
+}
+
+.options{
+    display: flex;
+}
+
+.options p{
+    padding: 0 5px;
+}
+
+.todo-info p:hover{
+    color: rgb(87,121,219);
+}
+.active{
+    color: rgb(87,121,219);
+}
+.active-check{
+    background: linear-gradient( hsl(192, 100%, 67%) , hsl(280, 87%, 65%));
+}
+.active-check i{
+    transform: scale(1) !important;
+}
+.complete{
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+/* Media Queries for responsiveness */
+@media screen and (max-width: 375px) {
+    .hero__container{
+        max-width: 376px;
+        /* width: 100%; */
+    }
+    .hero__header {
+        max-width: 375px;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        margin-top: 5px;
+    }
+
+    .hero__header h1 {
+        font-size: 16px;
+    }
+
+    .hero__header i {
+        width: 16px;
+        height: 16px;
+    }
+
+    .hero__todo {
+        margin-top: 10px;
+    }
+
+    form input {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+
+    .todo-li {
+        padding: 10px 10px;
+        font-size: 14px;
+    }
+
+    .todo-li .check {
+        width: 16px;
+        height: 16px;
+        margin-right: 10px;
+    }
+
+    .todo-info {
+        padding: 5px 5px;
+    }
+
+    .options p {
+        padding: 0 10px;
+    }
+}

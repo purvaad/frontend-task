@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: #76ABAE;
+}
+.container{
+    position: relative;
+    max-width: 600px;
+    width: 100%;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: rgba(100,100,111,0.2) 0px 7px 29px 0px;
+    background: #EEEEEE;
+}
+.register{
+    text-align: center;
+    font-size: 32px;
+    color: #222831;
+    font-weight: 600;
+}
+
+.container .form{
+    margin-top: 30px;
+}
+
+.form .form-group{
+    width: 100%;
+    margin-top: 25px;
+}
+
+.form-group label{
+    color: #222831;
+}
+
+.form :where(.form-group input) {
+    position: relative;
+    float: right;
+    height: 35px;
+    width: 50%;
+    padding: 5px 15px;
+    font-size: 12px;
+    color: #31363F;
+    margin-top: 5px;
+    /* margin-bottom: 5px; */
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    outline: none;
+  }
+
+.submit{
+    height: 55px;
+    width: 100%;
+    color: #EEEEEE;
+    font-size: 18px;
+    font-weight: 400;
+    margin-top: 30px;
+    border: none;
+    cursor: pointer;
+    background: #31363F;
+    transition: all 0.1s ease;
+    border-radius: 6px;
+}
+
+.success{
+    height: 25px;
+    width: 100%;
+    color: #A0153E;
+    font-size: 16px;
+    font-weight: 300;
+    margin-top: 10px;
+    border: 1px solid #A0153E;
+    cursor: pointer;
+    background: #D37676;
+    transition: all 0.1s ease;
+    border-radius: 5px;
+}
+
+.error {
+    color: #A0153E;
+    width: 50%;
+    height: 20px;
+    font-size: 10px;
+    margin-top: 5px;
+    font-weight: 400;
+    margin-top: 5px;
+    border: 1px solid #A0153E;
+    background: #D37676;
+    transition: all 0.1s ease;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    /* border-radius: 5px; */
+    position: relative;
+    top: 100%;
+    left: 50%;
+    padding: 0 5px;
+}
+
+.reg-link{
+    margin: 0 auto;
+    padding: 160px;
+    font-size: 14px;
+    color: #222831;
+    font-weight: 400;
+    
+}

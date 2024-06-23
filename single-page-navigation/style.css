@@ -1,0 +1,122 @@
+*{
+    /* margin: 0;
+    padding: 0; */
+    box-sizing: border-box;
+}
+
+html,body{
+    margin: 0px;
+    font-size: 16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#header{
+    margin-top: 20px; 
+    background-color: antiquewhite;
+    padding: 30px;
+    border-top: 1px solid dimgray;
+    border-bottom: 1px solid dimgray;
+    position: fixed;
+    width: 100%;
+}
+
+#header .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.container{
+    max-width: 1100px;
+    margin: 0 auto;
+    
+}
+.content{
+    max-width: 1000px;
+    align-items: center;
+    margin: 0 auto;
+}
+.nav-menu{
+    text-align: center;
+    /* margin: 0 10px 0 25px; */
+
+}
+
+.nav-menu ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav-menu ul li{
+    font-size: 18px;
+    display: inline-block;
+    margin: 0 25px 0 25px;
+}
+
+.nav-menu ul li a{
+    text-decoration: none;
+    color: dimgray;
+    display: inline-block;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid transparent;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-menu ul li a:hover{
+    border-bottom: 2px solid #000;
+}
+.nav-menu ul li a.active{
+    border-bottom: 2px solid #000;
+}
+
+h2{
+    font-size: 40px;
+    margin-top: 60px;
+    padding-bottom: 10px;
+}
+p{
+    font-size: 20px;
+    padding-bottom: 15px;
+}
+
+.container_row{
+    padding: 100px 1px;
+}
+#Open{
+    background: #CDFADB;
+    height: 650px;
+}
+#Benefits{
+    background: #F6FDC3;
+    height: 650px;
+
+}
+#Where{
+    background: #FFCF96;
+    height: 550px;
+}
+#uni{
+    background: #FF8080;
+    height: 550px;
+}
+#Future{
+    background: #FFBB64;
+    height: 650px;
+}
+
+/* Media Queries for Responsive Design */
+@media only screen and (max-width: 768px) {
+    .nav-menu ul li {
+        margin: 0 10px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .body{
+        padding: 10px;
+    }
+    .nav-menu ul li {
+        margin: 0 5px;
+    }
+}

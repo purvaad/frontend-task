@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+  --c-grey: #979797;
+  --c-black: #000;
+  --c-white: #fff;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: url('./bg-image-daytime.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+body.day{
+    background-image: url('./bg-image-daytime.jpg');
+}
+body.night{
+    background-image: url('./bg-image-nighttime.jpg');
+}
+
+header {
+  height: 100vh;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  &.add {
+    overflow: hidden;
+
+    .clock_timer--content {
+      display: none;
+    }
+
+    .clock_timer--timmer {
+      position: absolute;
+      top: 10px;
+      left: 165px;
+    }
+  }
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  padding-left: 300px;
+}
+
+.timer_wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.clock_timer--content {
+    position: absolute;
+    top: 50px;
+    left: 165px;
+    color: var(--c-white);
+    width: 50%;
+  
+    .quote-wrapper {
+      margin-bottom: 10px; // Adjust spacing between quote and author
+    }
+  
+    .quote {
+      margin-bottom: 13px;
+      font-size: 18px;
+      line-height: 28px;
+    //   margin-right: 20px;
+    }
+  
+    .author {
+      font-size: 18px;
+      line-height: 28px;
+      font-weight: 400;
+    }
+  }
+  
+  .refresh-quote {
+    position: relative;
+    top: -60px;
+    right: -450px;
+    cursor: pointer;
+    
+    img {
+      width: 16px;
+      height: 16px;
+    }
+  }
+  
+  
+  .refresh-quote {
+    cursor: pointer;
+  
+    img {
+      width: 24px;
+      height: 24px;
+    }
+  }
+  
+
+.clock_timer--timmer {
+  position: absolute;
+  bottom: 100px;
+  left: 165px;
+
+  .img_txt-content {
+    display: flex;
+    color: var(--c-white);
+
+    p {
+      margin-left: 8px;
+    }
+  }
+
+  .timmer {
+    display: flex;
+    align-items: baseline;
+    color: var(--c-white);
+
+    h2 {
+      font-size: 200px;
+      letter-spacing: -5px;
+      font-weight: 600;
+    }
+
+    p {
+      font-size: 40px;
+      margin-top: 60px;
+    }
+  }
+}
+
+.timer_country {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  align-items: center;
+  color: var(--c-white);
+  width: 1110px;
+
+  p {
+    margin: 0;
+    letter-spacing: 4.8px;
+    margin-right: 20px;
+    text-transform: capitalize;
+  }
+
+  .btn {
+    border: none;
+    font-family: inherit;
+    padding: 5px 10px;
+    margin-left: auto;
+    border-radius: 50px;
+    letter-spacing: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 146px;
+    height: 56px;
+    position: absolute;
+    right: 0px;
+    bottom: -30px;
+    cursor: pointer;
+    font-size: 18px;
+
+    &:active {
+      transform: scale(0.98);
+      
+    }
+  }
+}
+
+.btn img.rotate{
+    transform: rotate(180deg);
+    transition: transform 0.3s ease-in-out;
+}
+
+.more_info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 45%;
+  overflow-x: hidden;
+  color: var(--c-black);
+  background-color: var(--c-grey);
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    width: 100%;
+    height: 100%;
+    opacity: 0.95;
+  }
+
+//   p {
+//     color: #303030;
+//   }
+
+  .timer_data {
+    position: absolute;
+    top: 80px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 10px;
+    width: 100%;
+
+    p {
+      font-size: 13px;
+      line-height: 28px;
+      letter-spacing: 2.6px;
+    }
+
+    h2 {
+      font-size: 56px;
+      margin-bottom: 20px;
+    }
+  }
+
+  .left_content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &.hidden {
+    display: none;
+  }
+}

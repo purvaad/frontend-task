@@ -1,0 +1,376 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+
+}
+
+.header{
+    /* border-bottom: 1px solid dimgray; */
+    position: fixed;
+    background-color: #E7E3D4;
+    top: 0; 
+    width: 100%;
+    z-index: 999; 
+}
+
+.navbar{
+    position: sticky; /* Change position to sticky */
+    top: 0; /* Stick to the top of the page */
+} 
+
+body {
+    padding-top: 60px; 
+}
+.navbar ul li{
+    font-size: 16px;
+    display: inline-block;
+    margin: 0 0px 0 15px;
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    color: #191919;
+    display: inline-block;
+    padding-bottom: 5px;
+    border-bottom: 1px solid transparent;
+    transition: all 0.3s ease-in-out;
+}
+
+
+.navbar ul li a:hover {
+    border-bottom: 2px solid #222831; 
+    font-size: 17px;
+    font-weight: 500;
+    color: #222831; 
+}
+
+.navbar .items-left{
+    padding: 10px;
+    float: left;
+}
+
+.navbar .items-right{
+    padding: 10px;
+    float: right;
+}
+
+.form{
+    float: right;
+}
+
+.search {
+    position: relative;
+    height: 35px;
+    width: 50%;
+    padding: 5px 15px;
+    font-size: 10px;
+    color: #31363F;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    outline: none;
+  }
+
+.search-btn{
+    height: 35px;
+    width: 80px;
+    color: #EEEEEE;
+    font-size: 10px;
+    font-weight: 400;
+    border: none;
+    cursor: pointer;
+    background: #31363F;
+    transition: all 0.1s ease;
+    border-radius: 6px;
+}
+
+.heading{
+    color:#EEEEEE;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-size: 18px;
+    grid-area: auto;
+    letter-spacing: -0.374px;
+    line-height: 25px;
+    margin: 0 auto;
+    padding: 10px 10px;
+    background-color: #383e49;
+}
+
+.product-title{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px;
+}
+.row{
+    display: flex;
+    flex-direction: row;
+    /* display: grid;
+    grid-template-columns: auto auto auto; */
+    
+}
+
+.product-row{
+    /* display: flex;
+    flex-direction: row; */
+    display: grid;
+    grid-template-columns: auto auto auto;
+    
+}
+.col-products {
+    flex: 8;
+    padding: 10px; 
+    margin-bottom: 50px;
+    margin-left: 50px;
+}
+
+.col-menu {
+    flex: 2; 
+}
+
+.col-3 {
+    flex: 0 0 34%;
+    max-width: 34%;
+    margin-bottom: 10px;
+}
+
+.card {
+    width: 300px;
+    /* border: solid 0.2px #31363F; */
+    box-shadow:#000000 0px 0px 5px 0px;
+    border-radius: 5px;
+
+}
+
+.card-img-top {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+}
+
+.card-body {
+    padding: 20px; 
+}
+
+.card-title {
+    font-size: 20px; 
+    margin-bottom: 15px; 
+}
+
+.card-text {
+    font-size: 16px; 
+    margin-bottom: 20px; 
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #31363F;
+    border-color: #31363F;
+    padding: 10px 20px; 
+    font-size: 16px; 
+    line-height: 1.5;
+    border-radius: 4px; 
+    text-decoration: none;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.btn-primary:hover {
+    color: #fff;
+    background-color: #383e49;
+    border-color: #383e49;
+}
+
+.row-moredetails{
+    width: 100%;
+}
+h4{
+    text-align: center;
+}
+
+.product-details{
+    display: inline-flex;
+    width: 100%; 
+    padding: 20px;
+    position: relative;
+}
+
+.more-img{
+    width: 100%; 
+    padding: 10px 10px;
+    position: relative;
+}
+
+
+.col-menu {
+    flex: 0 0 16%; 
+    max-width: 100%;
+    background-color: #8590AA; 
+}
+
+.menu-nav-item {
+    background-color: #31363F; 
+    height: 50px;
+    list-style: none;
+    padding: 10px;
+    font-size: 18px;
+    text-align: center;
+
+}
+
+.menu-nav-link {
+    color: #fff; 
+    text-decoration: none;
+    text-align: center;
+}
+
+.menu-nav-link:hover {
+    text-decoration: underline;
+}
+
+.nav-item{
+    height: 40px;
+    list-style: none;
+    padding: 10px;
+    font-size: 16px;
+    text-transform: capitalize;
+}
+
+
+/* cart table css */
+.container{
+    position: relative;
+    max-width: 1000px;
+    width: 100%;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: rgba(100,100,111,0.2) 0px 7px 29px 0px;
+    background: #EEEEEE;
+    margin: 20px auto;
+}
+
+.amount{
+    display: flex;
+}
+
+
+table{
+    font-size: 16px;
+    color: #31363F;
+    width: 100%;
+    /* align-items: center; */
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    margin-bottom: 25px;
+
+  }
+  th, td {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+.cart-img{
+    object-fit: contain;
+    height: 100px;
+    width: 100px;
+}
+.table-btn{
+    height: 35px;
+    width: 80px;
+    color: #EEEEEE;
+    font-size: 12px;
+    font-weight: 400;
+    margin: 20px 0px;
+    border: none;
+    cursor: pointer;
+    background: #31363F;
+    transition: all 0.1s ease;
+    border-radius: 6px;
+}
+
+.quantity{
+    width: 50px;
+}
+
+.amount-btn{
+    height: 35px;
+    width: 140px;
+    color: #EEEEEE;
+    font-size: 12px;
+    font-weight: 400;
+    margin: 0 20px;
+    border: none;
+    cursor: pointer;
+    background: #31363F;
+    transition: all 0.1s ease;
+    border-radius: 6px;
+    text-decoration: none;
+}
+.btn-link{
+    text-decoration: none;
+    color: #EEEEEE;
+}
+.text-center{
+    align-items: center;
+}
+.log-btn{
+    height: 25px;
+    width: 100px;
+    color: #31363F;
+    font-size: 12px;
+    font-weight: 400;
+    margin: 0 20px;
+    border: none;
+    cursor: pointer;
+    background:  #EEEEEE;
+    transition: all 0.1s ease;
+    border-radius: 6px;
+    text-decoration: none;
+}
+.log-btn a{
+    text-decoration: none;
+    color: #31363F;
+}
+
+
+/* footer */
+.footer {
+    background-color: #E7E3D4;
+    color: #191919;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+.footer-bottom {
+    text-align: center;
+    padding: 10px 0;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+.container_profile{
+    position: relative;
+    max-width: 1000px;
+    width: 100%;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: rgba(100,100,111,0.2) 0px 7px 29px 0px;
+    background: #EEEEEE;
+    margin: 20px auto;
+    display: flex;
+    text-align: center;
+}
+.container_profile h2{
+    margin: 0 auto;
+}

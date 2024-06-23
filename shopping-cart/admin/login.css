@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: #C4DBF6;
+}
+
+.container{
+    position: relative;
+    max-width: 400px;
+    width: 100%;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: rgba(100,100,111,0.8) 0px 7px 29px 0px;
+    background: #E7E3D4;
+}
+
+
+header{
+    font-size: 20px;
+    margin: 10px;
+}
+
+.login{
+    text-align: center;
+    font-size: 32px;
+    color: #222831;
+    font-weight: 600;
+}
+
+.container .form{
+    margin-top: 30px;
+}
+
+.form .form-group{
+    width: 100%;
+    margin-top: 25px;
+}
+
+.form-group label{
+    color: #222831;
+}
+
+.form :where(.form-group input) {
+    position: relative;
+    float: right;
+    height: 35px;
+    width: 50%;
+    padding: 5px 15px;
+    font-size: 12px;
+    color: #31363F;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    outline: none;
+  }
+
+  .submit{
+    height: 50px;
+    width: 100%;
+    color: #EEEEEE;
+    font-size: 18px;
+    font-weight: 400;
+    margin: 30px 0;
+    border: none;
+    cursor: pointer;
+    background: #31363F;
+    transition: all 0.1s ease;
+    border-radius: 6px;
+
+}
+
+.reg-link{
+    margin: 0 auto;
+    padding: 60px;
+    font-size: 14px;
+    color: #222831;
+    font-weight: 400;
+    
+}
+
+.error{
+    height: 25px;
+    width: 100%;
+    text-align: center;
+    color: #A0153E;
+    font-size: 12px;
+    font-weight: 300;
+    border: 1px solid #A0153E;
+    cursor: pointer;
+    background: #D37676;
+    transition: all 0.1s ease;
+    border-radius: 5px;
+}
+
+
+/* footer */
+.footer {
+    background-color: #E7E3D4;
+    color: #191919;
+    /* padding: 5px 0; */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+.footer-bottom {
+    text-align: center;
+    padding: 10px 0;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+/* 
+h1{
+    color: #EEEEEE;
+}
+
+header{
+    background-color: #31363F;
+    border-top: 1px solid dimgray;
+    border-bottom: 1px solid dimgray;
+    width: 100%;
+}
+
+.navbar ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.navbar ul li{
+    font-size: 18px;
+    display: inline-block;
+    margin: 0 15px 0 15px;
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    color: #EEEEEE;
+    display: inline-block;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid transparent;
+    transition: all 0.3s ease-in-out;
+}
+
+.items-left{
+    width: 50%;
+} */

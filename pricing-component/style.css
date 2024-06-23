@@ -1,0 +1,234 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100%;
+    padding: 50px;
+    font-family: "Poppins", sans-serif;
+    background-color : rgb(242,244,253);
+}
+
+main{
+    display: grid;
+    flex-direction: column;
+    gap: 80px;
+}
+
+main header{
+    position: relative;
+    gap: 10px;
+    text-align: center;
+}
+
+header h1{
+    font-size: 40px;
+    font-weight: bold;
+    color: rgb(18,21,63);
+}
+header p{
+    font-size: 18px;
+    color: rgb(137, 140, 161);
+}
+
+.hero__container{
+    border-radius: 5px;
+    box-shadow: 3px 1px 15px 0px rgb(153, 155, 165);
+    background-color: white;
+    color: rgb(137, 140, 161);
+    font-weight: 500;
+}
+
+.hero__container-top{
+    border-bottom: 1px solid rgb(174, 178, 186);
+}
+
+.container-calc{
+    padding: 38px;
+    gap: 20px;
+    align-items: center;
+}
+.container-pageviews{
+    position: absolute;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+input[name="pageview"]{
+    appearance: none;
+    background: rgb(236,241,250);
+    background-image: linear-gradient(90deg, rgb(180,243,236) 100%, rgb(205,215,238) 0%);
+    height: 8px;
+    width: 100%;
+    border-radius: 20px;
+    background-size: 50% 100%;
+    background-repeat: no-repeat;
+    margin: 25px 0 30px 0;
+
+}
+input[name="pageview"]::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    width: 35px;
+    height: 35px;
+    border-radius: 50px;
+    background: rgb(100, 213, 196);
+    cursor: ew-resize;
+    background-image: url("./arrows-left-right-solid-2.svg");
+    background-size: 60%;
+    background-repeat: no-repeat;
+    background-position: center;
+    box-shadow: 0px 0px 20px 1px rgb(100, 213, 196);;
+
+}
+input[name="pageview"]::-webkit-slider-runnable-track{
+    box-shadow: none;
+    border: none;
+    background: transparent;
+}
+
+.container-amt{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.amt-price{
+    font-size: 35px;
+    font-weight: 800;
+    text-align: center;
+    color: rgb(45,52,85);
+}
+
+.amt-discount{
+    display: none;
+    font-size: 35px;
+    font-weight: 800;
+    color: rgb(45,52,85);
+}
+
+.container-billing{
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 16px;
+}
+.checkbox{
+    appearance: none;
+}
+
+label{
+    position: relative;
+    flex: 0 0 50px;
+    height: 26px;
+    border-radius: 20px;
+    background-color: rgb(205,214,238);
+}
+
+label:is(:focus, :hover), .checkbox:checked + label{
+    background-color: rgb(16, 213 ,193);
+}
+
+label::before{
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: white;
+    transition: transform 0.3s;
+}
+
+.checkbox:checked + label::before{
+    transform: translateX(20px);
+}
+
+.container-discount{
+    padding: 6px 6px;
+    border-radius: 15px;
+    font-size: 12px;
+    color: rgb(255,140,102);
+    background-color: rgb(254,236,231);
+}
+
+.icon{
+    display: none;
+}
+
+.hero__container-bottom{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 38px;
+    gap: 25px;
+}
+
+.benefits{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    list-style: none;
+    gap: 10px;
+    padding: 0;
+}
+
+.benefits li{
+    padding-left: 30px;
+    background-image: url("./check-solid-2.svg");
+    background-repeat: no-repeat;
+    background-size: 15px;
+    background-position: 0 center;
+}
+
+.trail-btn{
+    padding: 0.9em 3em;
+    border: none;
+    border-radius: 2em;
+    font-family: inherit;
+    color: rgb(205,214,238);
+    background-color: rgb(45,52,85);
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1089px) {
+    body{
+        padding: 35px;
+    }
+    header h1{
+        font-size: 24px;
+    }
+    .container-pageviews{
+        position: relative;
+    }
+
+    .container-amt{
+        align-items: center;
+    }
+
+    .container-billing{
+        font-size: 14px;
+        gap: 5px;
+    }
+    .mobile-discount{
+        display: none;
+    }
+    .icon{
+        display: inline-block;
+    }
+    .hero__container-bottom{
+        flex-direction: column;
+    }
+
+}
+

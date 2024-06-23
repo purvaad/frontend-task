@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing component - by purva</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+	<main>
+		<header>
+			<h1>Simple, Traffic-based Pricing</h1>
+			<p>Sign-up for our 30-day trial. No credit card required.</p>
+		</header>
+		<div class="hero__container">
+			<div class="hero__container-top">
+				<div class="container-calc">
+					<p class="container-pageviews">
+						100K PAGEVIEWS
+					</p>
+					<div class="container-amt">
+						<p class="amt-discount">discount</p>
+						<p>
+							<span class="amt-price">$16.00</span> /month
+						</p>
+					</div>
+					<input type="range" name="pageview" min="0" max="4" value="2">
+					<div class="container-billing">
+						<p>Monthly Billing</p>
+						<label for="switch-billing">
+							<input type="checkbox" name="switch-billing" id="switch-billing" class="checkbox">
+						</label>
+						<p>Yearly Billing</p>
+						<p class="container-discount"><span class="icon">-</span>25% <span class="mobile-discount">discount</span></p>
+					</div>
+				</div>
+			</div>
+			<div class="hero__container-bottom">
+				<ul class="benefits">
+					<li>Unlimited websites</li>
+					<li>100% data ownership</li>
+					<li>Email reports</li>
+				</ul>
+				<button class="trail-btn">Start my trial</button>
+			</div>
+		</div>
+	</main>
+
+    <script src="script.js"></script>
+</body>
+</html>

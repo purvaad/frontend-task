@@ -1,0 +1,136 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Lato", sans-serif;  
+}
+.hero__quiz{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    /* padding: 8px; */
+}
+.hero__container{
+    max-width: 1440px;
+    background-color: #EDE8E3;
+    padding: 0 50px 20px 50px;
+}
+
+.hero__header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    margin: 0 auto;
+}
+.hero__header img{
+    width: 35px;
+    height: 34px;
+    margin: 0 15px 0 15px;
+}
+
+.hero__header h1{
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 22.3px;
+    color: #191D63;
+}
+.divider{
+    background-color: black;
+    width: 100%;
+    margin: 10px 0 15px 0;
+    height: 1px;
+}
+
+.hero__content{
+    padding: 15px ;
+}
+.question {
+    margin-bottom: 45px;
+}
+.question p{
+    font-size: 20px;
+    padding-bottom: 19px;
+}
+.answer {
+    display: inline-block;
+    margin-bottom: 10px;
+    margin-right: 200px;
+    font-size: 18px;
+}
+.answer .options{
+    position: relative;
+    top: -5px;
+}
+input[type="radio"] {
+	appearance: none;
+    top: 0;
+    left: 0;
+	width: 26px;
+	height: 26px;
+	border: 2px solid #191D63;
+	border-radius: 50%;
+	background-clip: content-box;
+	padding: 3px;
+}
+
+input[type="radio"]:checked {
+	background-color: #191D63;
+}
+.submit{
+    background-color: white;
+    margin: 0 auto;
+    text-align: center;
+    max-height: 150px;
+}
+.submit-btn {
+    width: 150px;
+    height: 50px;
+    margin: 20px 10px 10px 0;
+    border-radius: 5px;
+    border: none;
+    background-color: #747475;
+    color: white;
+}
+.refresh-btn{
+    width: 150px;
+    height: 50px;
+    margin: 20px 0 10px 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #31CD63;
+    color: white;
+}
+
+.submit .note{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    line-height: 20px;
+}
+.submit .note span{
+    font-weight: bold;
+}
+
+.result{
+    color: red;
+    margin-bottom: 10px;
+}
+
+.incorrect input[type="radio"] {
+    border: 2px solid red;
+    background-color: red;
+}
+
+.correct input[type="radio"] {
+    border: 2px solid green;
+    background-color: green;
+}
+

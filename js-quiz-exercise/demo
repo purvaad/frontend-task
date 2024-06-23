@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MCQ Quiz</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+    .question {
+        margin-bottom: 20px;
+    }
+    .answer {
+        margin-bottom: 10px;
+    }
+    .submit-btn {
+        margin-top: 20px;
+    }
+    /* Custom radio button styling */
+    .custom-radio {
+        position: relative;
+        display: inline-block;
+        padding-left: 35px;
+        margin-right: 15px;
+        cursor: pointer;
+        line-height: 24px;
+    }
+    .custom-radio input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+    }
+    .checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 24px;
+        width: 24px;
+        background-color: #eee;
+        border-radius: 50%;
+    }
+    .custom-radio input:checked ~ .checkmark {
+        background-color: green;
+    }
+    .custom-radio.incorrect input:checked ~ .checkmark {
+        background-color: red;
+    }
+</style>
+</head>
+<body>
+
+<div class="quiz-container">
+    <div class="question">
+        <p>1. What is the capital of France?</p>
+        <div class="answer">
+            <label class="custom-radio">
+                <input type="radio" name="q1" value="Paris"> Paris
+                <span class="checkmark"></span>
+            </label>
+        </div>
+        <div class="answer">
+            <label class="custom-radio">
+                <input type="radio" name="q1" value="London"> London
+                <span class="checkmark"></span>
+            </label>
+        </div>
+        <div class="answer">
+            <label class="custom-radio">
+                <input type="radio" name="q1" value="Berlin"> Berlin
+                <span class="checkmark"></span>
+            </label>
+        </div>
+    </div>
+    <div class="question">
+        <p>2. What is the largest planet in our solar system?</p>
+        <div class="answer">
+            <label class="custom-radio">
+                <input type="radio" name="q2" value="Earth"> Earth
+                <span class="checkmark"></span>
+            </label>
+        </div>
+        <div class="answer">
+            <label class="custom-radio">
+                <input type="radio" name="q2" value="Jupiter"> Jupiter
+                <span class="checkmark"></span>
+            </label>
+        </div>
+        <div class="answer">
+            <label class="custom-radio">
+                <input type="radio" name="q2" value="Saturn"> Saturn
+                <span class="checkmark"></span>
+            </label>
+        </div>
+    </div>
+    <div class="question">
+        <p>3. Who wrote 'To Kill a Mockingbird'?</p>
+        <div class="answer">
+            <label class="custom-radio">
+                <input type="radio" name="q3" value="Harper Lee"> Harper Lee
+                <span class="checkmark"></span>
+            </label>
+        </div>
+        <div class="answer">
+            <label class="custom-radio">
+                <input type="radio" name="q3" value="J.K. Rowling"> J.K. Rowling
+                <span class="checkmark"></span>
+            </label>
+        </div>
+        <div class="answer">
+            <label class="custom-radio">
+                <input type="radio" name="q3" value="Stephen King"> Stephen King
+                <span class="checkmark"></span>
+            </label>
+        </div>
+    </div>
+    <button class="submit-btn">Submit</button>
+    <button class="refresh-btn">Refresh</button>
+    <div class="result"></div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const submitBtn = document.querySelector('.submit-btn');
+        const refreshBtn = document.querySelector('.refresh-btn');
+        const resultDiv = document.querySelector('.result');
+
+        submitBtn.addEventListener('click', function() {
+            let correctAnswers = 0;
+
+            // Checking answers
+            const questions = document.querySelectorAll('.question');
+            questions.forEach(question => {
+                const answers = question.querySelectorAll('input[type="radio"]');
+                answers.forEach(answer => {
+                    if (answer.checked) {
+                        if ((answer.value === 'Paris' && question.querySelector('input[value="Paris"]')) ||
+                            (answer.value === 'Jupiter' && question.querySelector('input[value="Jupiter"]')) ||
+                            (answer.value === 'Harper Lee' && question.querySelector('input[value="Harper Lee"]'))) {
+                            answer.parentElement.classList.remove('incorrect');
+                            answer.parentElement.classList.add('correct');
+                            correctAnswers++;
+                        } else {
+                            answer.parentElement.classList.remove('correct');
+                            answer.parentElement.classList.add('incorrect');
+                        }
+                    }
+                });
+            });
+
+            // Displaying result
+            resultDiv.textContent = `You scored ${correctAnswers} out of 3.`;
+        });
+
+        refreshBtn.addEventListener('click', function() {
+            // Clearing choices
+            const answers = document.querySelectorAll('input[type="radio"]');
+            answers.forEach(answer => {
+                answer.checked = false;
+                answer.parentElement.classList.remove('correct', 'incorrect');
+            });
+            resultDiv.textContent = ''; // Clear result
+        });
+    });
+</script>
+
+</body>
+</html>
+
+
+// document.addEventListener('DOMContentLoaded', function() {
+    //     const submitBtn = document.querySelector('.submit-btn');
+    //     const refreshBtn = document.querySelector('.refresh-btn');
+    //     const note = document.querySelector('.note');
+    //     const resultDiv = document.querySelector('.result');
+    
+    //     submitBtn.addEventListener('click', function() {
+    //         let correctAnswers = 0;
+    
+    //         // Checking answers
+    //         const questions = document.querySelectorAll('.question');
+    //         questions.forEach(question => {
+    //             const answers = question.querySelectorAll('input[type="radio"]');
+    //             answers.forEach(answer => {
+    //                 if (answer.checked) {
+    //                     if ((answer.value === 'q1-a4' && question.querySelector('input[value="q1-a4"]')) ||
+    //                         (answer.value === 'q2-a2' && question.querySelector('input[value="q2-a2"]')) ||
+    //                         (answer.value === 'q3-a2' && question.querySelector('input[value="q3-a2"]')) ||
+    //                         (answer.value === 'q4-a3' && question.querySelector('input[value="q4-a3"]')) ||
+    //                         (answer.value === 'q5-a4' && question.querySelector('input[value="q5-a4"]'))) {
+    //                         answer.parentElement.classList.remove('incorrect');
+    //                         answer.parentElement.classList.add('correct');
+    //                         correctAnswers++;
+    //                     } else {
+    //                         answer.parentElement.classList.remove('correct');
+    //                         answer.parentElement.classList.add('incorrect');
+    //                     }
+    //                 }
+    //             });
+    //         });
+    
+    //         // Displaying result and hiding note
+    //         resultDiv.textContent = `Result: ${correctAnswers} out of 5 answers are correct.`;
+    //         note.style.display = 'none';
+    //         resultDiv.style.display = 'block';
+    //     });
+    
+    //     refreshBtn.addEventListener('click', function() {
+    //         // Clearing choices and showing note
+    //         const answers = document.querySelectorAll('input[type="radio"]');
+    //         answers.forEach(answer => {
+    //             answer.checked = false;
+    //             answer.parentElement.classList.remove('correct', 'incorrect');
+    //         });
+    //         resultDiv.textContent = ''; // Clear result
+    //         note.style.display = 'block';
+    //         resultDiv.style.display = 'none';
+    //     });
+    // });
+    

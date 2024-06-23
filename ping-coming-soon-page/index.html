@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Ping coming soon page</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="conatiner">
+      <a href="#" class="logo">
+        <img src="./images/logo.svg" alt="logo">
+      </a>
+
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="hero-section_body">
+      <div class="container">
+        <div class="hero-section_main">
+          <div class="hero-section_content">
+            <h1>We are launching<span> soon!</span></h1>
+            <p>Subscribe and get notified</p>
+            <form action="#" id="form">
+              <div class="email-error"> 
+                <input type="email" id="email" placeholder="Your email address..." />
+                <br>
+                <span id="error"></span>
+
+              </div>
+              <a href="#" class="button" onclick="validate()">Notify Me</a>
+            </form>
+          </div>
+          <div class="hero-section_img">
+            <img src="./images/illustration-dashboard.png" alt="img">
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <ul class="social">
+        <li>
+          <a href="#" target="_blank">
+            <i class="fa fa-facebook-f" aria-hidden="true"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#" target="_blank">
+            <i class="fa fa-twitter" aria-hidden="true"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#" target="_blank">
+            <i class="fa fa-instagram" aria-hidden="true"></i>
+          </a>
+        </li>
+      </ul>
+      <p>&copy; Copyright Ping. All rights reserved.</p>
+    </div>
+  </footer>
+  <script>
+    const email = document.getElementById("email");
+    const error = document.getElementById("error");
+
+      function validate() {
+          if(email.value.match(/^[A-Za-z\._\-0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/)) {
+              email.style.border = "1px solid hsl(223, 100%, 88%);";
+              error.textContent = "";
+          } else {
+              email.style.border = "1px solid hsl(354, 100%, 66%);";
+              error.textContent = "Please provide a valid email address";
+          }
+      }
+
+  </script>
+</body>
+</html>

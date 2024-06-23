@@ -1,0 +1,244 @@
+
+/* common */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Manrope", sans-serif;
+    font-weight: 500;
+}
+
+body{
+    background-color: hsl(210, 46%, 95%);
+}
+
+img{
+    max-width: 100%;
+}
+
+.container{
+    width: 100%;
+    max-width: 730px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border-radius: 10px;
+}
+
+.card__share-profile-btn{
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: none;
+    background-color: hsl(210, 46%, 95%);
+    cursor: pointer;
+}
+
+.card__share-profile-btn:hover{
+    background-color: hsl(212, 23%, 69%);
+}
+.card__share-profile-btn:hover img{
+    filter: brightness(100);
+}
+
+/* card */
+.card{
+    display: flex;
+}
+
+/* card image */
+.card__image{
+    flex-basis: 37%;
+}
+.card__photo{
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+/* right side content */
+.card__content{
+    display: flex;
+    flex-direction: column;
+    flex-basis: 63%;
+    padding: 32px 40px;
+
+}
+
+.card__title{
+    font-size: 20px;
+    font-weight: 700;
+    padding: 0;
+    color: hsl(217, 19%, 35%);
+    line-height: 28px;
+    margin-bottom: 12px;
+
+}
+
+.card__text{
+    font-size: 13px;
+    line-height: 20px;
+    margin-bottom: 20px;
+    color: hsl(214, 17%, 51%);
+}
+
+
+
+/* share profile */
+.card__footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    
+}
+
+.card__share-profile{
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    align-items: center;
+}
+
+.card__share-profile-photo{
+    max-width: 40px;
+    max-height: 40px;
+    border-radius: 50%;
+}
+
+.card__share-profile-info{
+    font-size: 13px;
+    line-height: 20px;
+}
+
+.card__share-profile-name {
+    font-weight: 700;
+    color: hsl(217, 19%, 35%);
+}
+
+.card__date {
+    color: hsl(214, 17%, 51%);
+}
+
+
+/* social */
+.card__social {
+    display: none;
+    /* display: flex; */
+    position: absolute;
+    width: 248px;
+    height: 55px;
+    top: 129px;
+    right: -68px;
+    padding: 18px 36px;
+    align-items: center;
+    border-radius: 10px;
+    background-color: hsl(217, 19%, 35%);
+    justify-content: space-around;
+    -ms-flex-pack: distribute;
+    -ms-flex-align: center;
+    align-items: center;
+    transition: all 0.2s ease-in-out;
+
+
+}
+
+.card__social::after {
+    position: absolute;
+    content: "";
+    width: 24px;
+    height: 24px;
+    background-color: inherit;
+    position: absolute;
+    bottom: -0.75rem;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    z-index: -1;
+}
+
+.card__share-text{
+    font-size: 13px;
+    line-height: 20px;
+    letter-spacing: 5px;
+    color: hsl(212, 23%, 69%);
+}
+
+
+
+/* .social ul {
+    color: hsl(210, 46%, 95%);
+    list-style: none;
+    display: flex;
+    gap: 20px;
+} */
+
+
+/* .social ul li {
+    min-width: 20px;
+} */
+
+
+/* responsive css */
+@media screen and (max-width: 876px) {
+    .container{
+        max-width: 327px;
+        max-height: 512px;
+    }
+
+    .card__share-profile-btn{
+        margin-top: 14px;
+        z-index: 1;
+    }
+
+    .card {
+        flex-direction: column;
+    }
+
+    .card__image{
+        max-height: 200px;
+        
+    }
+    .card__photo{
+        max-height: 200px;
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 10px;
+        
+    }
+    .card__content {
+        padding: 36px 32px 20px;
+
+    }
+
+    .card__title{
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0.2px;
+    }
+  
+    .card__text{
+        margin-bottom: 32px;
+    }
+    .card__share-profile{
+        gap: 23px;
+    }
+
+    .card__social {
+        height: 64px;
+        width: 327px;
+        padding: 22px 120px 22px 32px;
+        justify-content: space-between;
+        right: 0px;
+        top: 432px;
+        border-radius: 0px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+
+    }
+
+    .card__social::after{
+        display: none;
+    }
+}

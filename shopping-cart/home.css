@@ -1,0 +1,449 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,300,400,500,600,700,800, 800i, 900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #f7f6f6;
+    overflow-x: hidden;
+}
+
+.header{
+    position: fixed;
+    background-color: #D6DAC8;
+    top: 0; 
+    width: 100%;
+    z-index: 999; 
+}
+
+.navbar{
+    position: sticky; 
+    top: 0; 
+} 
+
+body {
+    padding-top: 60px; 
+}
+.navbar ul li{
+    font-size: 16px;
+    display: inline-block;
+    margin: 0 0px 0 15px;
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    color: #191919;
+    display: inline-block;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid transparent;
+    transition: all 0.3s ease-in-out;
+}
+
+
+.navbar ul li a:hover {
+    border-bottom: 2px solid #222831; 
+    color: #222831; 
+}
+
+.navbar .items-left{
+    padding: 10px;
+    float: left;
+}
+
+.navbar .items-right{
+    padding: 10px;
+    float: right;
+}
+
+.form{
+    float: right;
+}
+
+.search {
+    position: relative;
+    height: 35px;
+    width: 50%;
+    padding: 5px 15px;
+    font-size: 10px;
+    color: #31363F;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    outline: none;
+  }
+
+.search-btn{
+    height: 35px;
+    width: 80px;
+    color: #EEEEEE;
+    font-size: 10px;
+    font-weight: 400;
+    border: none;
+    cursor: pointer;
+    background: #31363F;
+    transition: all 0.1s ease;
+    border-radius: 6px;
+}
+
+
+.apple-card{
+    min-height: 90vh;
+
+}
+.apple{
+    font-size: 36px;
+    width: 90%;
+    margin: 20px;
+    border-bottom: solid 1px #000 ;
+}
+
+.apple-card h2 {
+    margin-bottom: 10px;
+}
+
+.apple-card h3{
+    font-size: 30px;
+    width: 100%;
+    justify-content: center;
+    display: inline-flex;
+    margin-bottom: 25px;
+    
+}
+
+.container {
+    position: relative;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    justify-content: space-around;
+}
+
+.container .card {
+    position: relative;
+    width: 300px;
+    height: 500px;
+    background: #eceae09f;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.container .card:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #31363F;
+    clip-path: circle(150px at 80% 20%);
+    transition: 0.5s ease-in-out;
+}
+
+.container .card:hover:before {
+    clip-path: circle(300px at 80% -20%);
+}
+
+.container .card:after {
+    content: "iphone";
+    position: absolute;
+    top: 40%;
+    left: -5%;
+    font-size: 5em;
+    font-weight: 800;
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.309);
+}
+
+.container .card .imgBx {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1000;
+    width: 100%;
+    height: 100%;
+    transition: .5s;
+}
+
+.container .card:hover .imgBx {
+    top: 0%;
+    transform: translateY(-25%);
+}
+
+.container .card .imgBx img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0deg);
+    width: 150px;
+}
+
+.container .card .contentBx {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    transition: 1s;
+    z-index: 90;
+}
+
+.container .card:hover .contentBx {
+    height: 250px;
+}
+
+.container .card .contentBx h2 {
+    position: relative;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #000;
+}
+
+.container .card .contentBx .size,
+.container .card .contentBx .color {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 20px;
+    transition: .5s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.container .card:hover .contentBx .size {
+    opacity: 1;
+    visibility: visible;
+    transition-delay: .5s;
+}
+
+.container .card:hover .contentBx .color {
+    opacity: 1;
+    visibility: visible;
+    transition-delay: .6s;
+}
+
+.container .card .contentBx .size h3,
+.container .card .contentBx .color h3 {
+    color: #000;
+    font-weight: 300;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.container .card .contentBx .color .color-options {
+    display: inline-block;
+    width: 80%;
+}
+
+.container .card .contentBx .color .color-options span {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.container .card .contentBx .color .color-options span:nth-child(1) {
+    background: #fff; /* Add your color for the first option */
+}
+
+.container .card .contentBx .color .color-options span:nth-child(2) {
+    background: rgb(230, 209, 210);
+}
+
+.container .card .contentBx .color .color-options span:nth-child(3) {
+    background: rgb(61, 64, 66);
+}
+
+.container .card .contentBx .color .color-options span:nth-child(4) {
+    background: rgb(210, 217, 212);
+}
+
+.container .card .contentBx .color h3 {
+    color: #000;
+    font-weight: 300;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-right: 10px;
+}
+
+
+
+.container .card .contentBx a {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #fff;
+    border-radius: 4px;
+    margin-top: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    color: #111;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: .5s;
+}
+
+.container .card:hover .contentBx a {
+    opacity: 1;
+    transform: translateY(0px);
+    transition-delay: .7s;
+} 
+
+
+.hero-main {
+    width: 100%;
+}
+
+/* new arrivals section styles  */
+
+.new-arrivals{
+    margin: 0 auto;
+}
+
+.ribbon{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    min-height: 70vh;
+    height: 100%;
+    background-color: #EEEEEE;
+    align-items: center;
+    box-shadow:#000000 0px 0px 10px 0px;
+    padding: 10px 20px;
+
+}
+.ribbon-card {
+    position: relative;
+    width: 250px;
+    height: 465px;
+    background: #eceae09f;
+    overflow: hidden;
+    border: solid 0.2px #31363F;
+    padding: 10px 5px;
+    transition: transform 0.3s; 
+}
+
+.ribbon-card:hover {
+    transform: scale(1.1); 
+}
+.card-img-top {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+}
+
+.card-body {
+    padding: 20px; 
+}
+
+.card-title {
+    font-size: 20px; 
+    margin-bottom: 15px; 
+}
+
+.card-text {
+    font-size: 16px; 
+    margin-bottom: 20px; 
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #31363F;
+    border-color: #31363F;
+    padding: 5px 5px; 
+    font-size: 15px; 
+    line-height: 1.5;
+    border-radius: 4px; 
+    text-decoration: none;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.btn-primary:hover {
+    color: #fff;
+    background-color: #383e49;
+    border-color: #383e49;
+}
+
+/* slider style  */
+ .slider {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.slide-item {
+    width: 100%;
+    display: none;
+}
+
+.slide-item img {
+    width: 100%;
+}
+
+.active {
+    display: block;
+}
+
+
+/* brands section styles  */
+
+.featured-brands{
+    min-height: 30vh;
+ }
+.heading{
+    width: 100%;
+    background-color: #31363F;
+    height: 40px;
+    color: #EEEEEE;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 25px;
+
+}
+
+.brands {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 20px;
+    width: 80%;
+    /* margin-bottom: 20px; */
+}
+
+.brands img{
+    width: 120px;
+    height: 120px;
+    border-radius: 10%;
+    box-shadow:#000000 0px 0px 10px 0px;
+}
+
+/* footer style  */
+
+
+/* footer */
+.footer {
+    background-color: #D6DAC8;
+    color: #191919;
+    /* padding: 5px 0; */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+.footer-bottom {
+    text-align: center;
+    padding: 10px 0;
+}
+
+.footer-bottom p {
+    margin: 0;
+}

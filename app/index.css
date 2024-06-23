@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #76ABAE;
+    color: #EEEEEE;
+}
+h1{
+    color: #EEEEEE;
+}
+
+header{
+    background-color: #31363F;
+    border-top: 1px solid dimgray;
+    border-bottom: 1px solid dimgray;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.navbar ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.navbar ul li{
+    font-size: 18px;
+    display: inline-block;
+    margin: 0 15px 0 15px;
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    color: #EEEEEE;
+    display: inline-block;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid transparent;
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar ul li a:hover {
+    border-bottom: 2px solid #76ABAE; 
+    color: #76ABAE; 
+}
+
+
+.navbar .items-left{
+    padding: 20px;
+    float: left;
+}
+
+.navbar .items-right{
+    padding: 20px;
+    float: right;
+}
+
+.container{
+    position: relative;
+    max-width: 1000px;
+    width: 100%;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: rgba(100,100,111,0.2) 0px 7px 29px 0px;
+    background: #EEEEEE;
+    margin: 10px 0;
+}
+
+table{
+    font-size: 16px;
+    color: #31363F;
+    width: 100%;
+    align-items: center;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+  th, td {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  /* .logout{
+    height: 35px;
+    width: 100px;
+    color: #EEEEEE;
+    font-size: 20px;
+    font-weight: 400;
+    margin-top: 30px;
+    border: none;
+    cursor: pointer;
+    background: #31363F;
+    transition: all 0.1s ease;
+    border-radius: 6px;
+    text-decoration: none;
+    text-align: center;
+    align-items: center;
+  } */

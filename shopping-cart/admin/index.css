@@ -1,0 +1,221 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+
+}
+
+.header{
+    /* border-bottom: 1px solid dimgray; */
+    position: fixed;
+    background-color: #D6DAC8;
+    top: 0; 
+    width: 100%;
+    z-index: 999; 
+}
+
+.navbar{
+    position: sticky; /* Change position to sticky */
+    top: 0; /* Stick to the top of the page */
+} 
+
+body {
+    padding-top: 60px; 
+}
+.navbar ul li{
+    font-size: 16px;
+    display: inline-block;
+    margin: 0 0px 0 15px;
+}
+
+.items-left li a{
+    text-decoration: none;
+    color: #484444;
+    display: inline-block;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid transparent;
+    transition: all 0.3s ease-in-out;
+}
+
+
+.items-left li a:hover {
+    border-bottom: 2px solid #222831; 
+    color: #222831; 
+}
+
+.navbar .items-left{
+    padding: 10px;
+    float: left;
+}
+
+.navbar .items-right{
+    color: #EEEEEE;
+    padding: 10px;
+    float: right;
+}
+
+.logout{
+    height: 35px;
+    width: 140px;
+    color: #EEEEEE;
+    font-size: 12px;
+    font-weight: 400;
+    margin: 0 20px;
+    border: none;
+    cursor: pointer;
+    background: #31363F;
+    transition: all 0.1s ease;
+    border-radius: 6px;
+    text-decoration: none;
+}
+.logout-link{
+    text-decoration: none;
+    color: #EEEEEE;
+}
+
+/* .form{
+    float: right;
+} */
+
+input {
+    position: relative;
+    height: 35px;
+    width: 50%;
+    padding: 5px 15px;
+    font-size: 10px;
+    color: #31363F;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    outline: none;
+  }
+
+button{
+    height: 35px;
+    width: 80px;
+    color: #EEEEEE;
+    font-size: 10px;
+    font-weight: 400;
+    border: none;
+    cursor: pointer;
+    background: #31363F;
+    transition: all 0.1s ease;
+    border-radius: 6px;
+}
+
+.heading{
+    color:#1d1d1f;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: 18px;
+    grid-area: auto;
+    letter-spacing: -0.374px;
+    line-height: 25px;
+    margin: 0 auto;
+    padding: 20px 0px;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+}
+
+/* Styling for the admin image */
+.admin_image {
+    width: 100px; 
+    height: auto; 
+    display: block; 
+    margin: 0 auto; 
+    object-fit: contain;
+}
+
+/* Styling for the admin card */
+.col-2 {
+    background-color: #8590AA !important; 
+    border-radius: 10px; 
+    padding: 20px; 
+    text-align: center; 
+    margin: 0 auto;
+    width: 80%;
+    display: flex;
+    align-items: center;
+}
+.admin-pic{
+    padding: 10px;
+}
+
+.options {
+    text-align: center;
+    /* margin: 10px 255px ; */
+    margin: 0 auto;
+    width: 50%;
+    display: inline-grid;
+    grid-template-columns: auto auto ;
+}
+
+.options button {
+    border: none; 
+    background: none; 
+    padding: 2px 5px; 
+    margin: 15px 10px; 
+    background-color: #31363F !important;
+    height: 40px;
+    width: 140px;
+    text-align: center;
+    font-size: 14px;
+}
+
+button a {
+    display: block; 
+    text-decoration: none; 
+}
+
+.nav-link {
+    color: #ffffff !important;
+    
+}
+
+.container{
+    margin: 20px 50px 250px;
+    text-align: center;
+}
+
+
+/* table styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid black;
+    padding: 8px;
+}
+
+th {
+    background-color: #8590AA;
+}
+    
+
+/* footer */
+.footer {
+    background-color: #D6DAC8;
+    color: #191919;
+    /* padding: 5px 0; */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+.footer-bottom {
+    text-align: center;
+    padding: 10px 0;
+}
+
+.footer-bottom p {
+    margin: 0;
+}

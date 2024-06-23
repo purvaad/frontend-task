@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="style.css" />
+
+  </head>
+  <body>
+    <div class="container">
+      <form id="registrationForm">
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" id="name" placeholder="Your name" required />
+          <div class="error-message" id="nameError"></div>
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" placeholder="Your email" required />
+          <div class="error-message" id="emailError"></div>
+        </div>
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input type="password" id="password" required />
+          <div class="error-message" id="passwordError"></div>
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone Number:</label>
+          <input type="tel" id="phone" placeholder="Phone Number" />
+          <div class="error-message" id="phoneError"></div>
+        </div>
+        <div class="form-group">
+          <label>Gender:</label>
+          <input type="radio" id="male" name="gender" value="male" required />
+          <label for="male">Male</label>
+          <input type="radio" id="female" name="gender" value="female" required />
+          <label for="female">Female</label>
+          <input type="radio" id="other" name="gender" value="other" required />
+          <label for="other">Other</label>
+          <div class="error-message" id="genderError"></div>
+        </div>
+        <div class="form-group">
+          <label for="language">Language:</label>
+          <select id="language">
+            <option value="">Select language</option>
+            <option value="en">English</option>
+            <option value="fr">French</option>
+            <option value="es">Spanish</option>
+          </select>
+          <div class="error-message" id="languageError"></div>
+        </div>
+        <div class="form-group">
+          <label for="zipCode">Zip Code:</label>
+          <input type="text" id="zipCode" placeholder="Zip Code" />
+          <div class="error-message" id="zipCodeError"></div>
+        </div>
+        <div class="form-group">
+          <label for="about">About:</label>
+          <textarea id="about" placeholder="Write about yourself..."></textarea>
+        </div>
+        <button type="submit">Register</button>
+      </form>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Chat app css illustration - purva</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@400;500;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/f3e191c478.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- background gradient -->
+  <div class="gradient-design left"></div>
+  <div class="gradient-design right"></div>
+
+  <main class="main">
+    <div class="container">
+      <div class="hero">
+        <!-- mobile illustration -->
+        <div class="hero__mobile">
+          <div class="mobile__body">
+            <div class="mobile__header">
+              <div class="mobile__header-inner">
+                <!-- mobile camera -->
+                <div class="mobile__header-camera"></div>
+                  <!-- profile status -->
+                <div class="profile">
+                    <i class="fa-solid fa-chevron-left"></i>
+                    <div class="profile__image">
+                      <img src="./images/avatar.jpg" alt="avatar">
+                    </div>
+                    <div class="profile__info">
+                      <div class="profile__name">Samuel Green</div>
+                      <div class="profile__status">Available to Walk</div>
+                    </div>
+                    <!-- menu -->
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                </div>
+                
+              </div>
+              <!-- mobile screen -->
+              <div class="mobile__msg">
+                <!-- left message -->
+                <div class="msg msg-received">
+                    <p class="text-msg text-msg-received">
+                      That sounds great. I’d be happy with that.
+                    </p>
+                    <p class="text-msg text-msg-received">
+                      Could you send over some pictures of your dog, please?
+                    </p>
+                </div>
+                <!-- sent message  -->
+                <div class="msg msg-sent">
+                    <div class="text-msg img-msg">
+                        <img src="./images/dog-image-1.jpg" alt="dog-image-1" />
+                        <img src="./images/dog-image-2.jpg" alt="dog-image-2" />
+                        <img src="./images/dog-image-3.jpg" alt="dog-image-3" />
+                    </div>
+                    <p class="text-msg text-msg-sent">
+                      Here are a few pictures. She’s a happy girl!
+                    </p>
+                    <p class="text-msg text-msg-sent">
+                      Can you make it?
+                    </p>
+                </div>
+
+                <!-- received message-rates  -->
+                <div class="msg msg-received">
+                    <p class="text-msg text-msg-received">
+                      She looks so happy! The time we discussed works. How long shall I take her out for?
+                    </p>
+                    <!-- radio options -->
+                    <div class="msg__radio">
+                        <span class="check"></span>
+                        <p class="msg__radio-text">30 minute walk</p>
+                        <p class="msg__radio-rate">$29</p>
+                    </div>
+                    <div class="msg__radio">
+                        <span class="check"></span>
+                        <p class="msg__radio-text">1 hour walk</p>
+                        <p class="msg__radio-rate">$49</p>
+                    </div>
+                </div>
+                <!-- Chat Input Box -->
+                <div class="msg__type">
+                    <input type="text" placeholder="Type a message…" />
+                    <button>
+                      <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+
+
+            </div>
+          </div>
+        </div>
+        
+        <!-- right side content -->
+        <div class="hero__content">
+          <div class="hero__content-body">
+            <h1>Simple booking</h1>
+            <p>
+              Stay in touch with our dog walkers through the chat 
+              interface. This makes it easy to discuss arrangements and 
+              make bookings. Once the walk has been completed you can 
+              rate your walker and book again all through the chat.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  
+  </div>
+</body>
+</html>

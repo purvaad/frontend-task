@@ -1,0 +1,317 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+:root {
+  --c-grey: #979797;
+  --c-black: #000;
+  --c-white: #fff;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: url("./bg-image-daytime.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  overflow-x: hidden;
+
+}
+
+body.day {
+  background-image: url("./bg-image-daytime.jpg");
+}
+
+body.night {
+  background-image: url("./bg-image-nighttime.jpg");
+}
+
+header {
+  height: 100vh;
+  position: relative;
+}
+header::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+header.add {
+  overflow: hidden;
+}
+header.add .clock_timer--content {
+  display: none;
+}
+header.add .clock_timer--timmer {
+  position: absolute;
+  top: 10px;
+  left: 165px;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  padding-left: 30px;
+}
+
+.timer_wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.clock_timer--content {
+  position: absolute;
+  top: 50px;
+  left: 165px;
+  color: var(--c-white);
+  width: 50%;
+}
+.clock_timer--content .quote-wrapper {
+  margin-bottom: 10px;
+}
+.clock_timer--content .quote {
+  margin-bottom: 13px;
+  font-size: 18px;
+  line-height: 28px;
+}
+.clock_timer--content .author {
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 400;
+}
+
+.refresh-quote {
+  /* position: relative;
+  top: -60px;
+  right: -450px; */
+  cursor: pointer;
+  float: right;
+}
+.refresh-quote img {
+  width: 16px;
+  height: 16px;
+}
+
+.clock_timer--timmer {
+  position: absolute;
+  bottom: 100px;
+  left: 165px;
+  width: 80%;
+}
+.clock_timer--timmer .img_txt-content {
+  display: flex;
+  color: var(--c-white);
+}
+.clock_timer--timmer .img_txt-content p {
+  font-size: 20px;
+  margin-left: 8px;
+}
+.clock_timer--timmer .timmer {
+  display: flex;
+  align-items: baseline;
+  color: var(--c-white);
+}
+.clock_timer--timmer .timmer h2 {
+  font-size: 200px;
+  letter-spacing: -5px;
+  font-weight: 600;
+}
+.clock_timer--timmer .timmer p {
+  font-size: 40px;
+  margin-top: 60px;
+}
+
+.timer_country {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  color: var(--c-white);
+  width: 100%;
+  flex-direction: row;
+}
+.timer_country p {
+  margin: 0;
+  letter-spacing: 4.8px;
+  margin-right: 20px;
+  text-transform: capitalize;
+}
+.timer_country .btn {
+  border: none;
+  font-family: inherit;
+  padding: 5px 10px;
+  margin-left: auto;
+  border-radius: 50px;
+  letter-spacing: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 146px;
+  height: 56px;
+  cursor: pointer;
+  font-size: 18px;
+}
+.timer_country .btn:active {
+  transform: scale(0.98);
+}
+
+.btn img.rotate {
+  transform: rotate(180deg);
+  transition: transform 0.3s ease-in-out;
+}
+
+.more_info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 45%;
+  overflow-x: hidden;
+  color: var(--c-black);
+  background-color: var(--c-grey);
+}
+.more_info::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 100%;
+  opacity: 0.95;
+}
+.more_info .timer_data {
+  position: absolute;
+  top: 80px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 10px;
+  width: 100%;
+}
+.more_info .timer_data p {
+  font-size: 13px;
+  line-height: 28px;
+  letter-spacing: 2.6px;
+}
+.more_info .timer_data h2 {
+  font-size: 56px;
+  margin-bottom: 20px;
+}
+.more_info .left_content {
+  display: flex;
+  flex-direction: column;
+}
+.more_info.hidden {
+  display: none;
+}/*# sourceMappingURL=style.css.map */
+
+@media screen and (max-width: 992px) {
+
+  body.day {
+    background-image: url("./bg-image-daytime-tablet.jpg");
+  }
+  
+  body.night {
+    background-image: url("./bg-image-nighttime-tablet.jpg");
+  }
+  .container{
+    padding-left: 10px;
+
+  }
+
+  .clock_timer--content {
+    position: absolute;
+    top: 50px;
+    left: 0px;
+    color: var(--c-white);
+    width: 80%;
+  }
+  .clock_timer--timmer .img_txt-content p {
+    font-size: 18px;
+  }
+  .timer_country .btn {
+    border: none;
+    font-family: inherit;
+    padding: 5px 10px;
+    margin-left: 0;
+    border-radius: 50px;
+    letter-spacing: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 146px;
+    height: 56px;
+    cursor: pointer;
+    font-size: 18px;
+  }
+
+  .timer_country {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    color: var(--c-white);
+    width: 100%;
+    flex-direction: column;
+  }
+  .clock_timer--timmer {
+    left: 0;
+  }
+  .clock_timer--timmer .timmer h2 {
+    font-size: 175px;
+    letter-spacing: -4.3px;
+    font-weight: 600;
+  }
+  .clock_timer--timmer .timmer p {
+    font-size: 18px;
+    letter-spacing: 3.6px;
+    margin-top: 10px;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  body.day {
+    background-image: url("./bg-image-daytime-mobile.jpg");
+  }
+  
+  body.night {
+    background-image: url("./bg-image-nighttime-mobile.jpg");
+  }
+  .timer_country .btn {
+    border: none;
+  font-family: inherit;
+  padding: 5px 10px;
+  margin-left: 0;
+  border-radius: 50px;
+  letter-spacing: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 146px;
+  height: 56px;
+  /* position: absolute; */
+  font-size: 18px;
+  right:0px;
+  }
+
+  .timer_country {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    color: var(--c-white);
+    width: 100%;
+    flex-direction: column;
+  }
+  header.add .clock_timer--timmer {
+    position: absolute;
+    top: 10px;
+   left: 0px;
+  }
+}

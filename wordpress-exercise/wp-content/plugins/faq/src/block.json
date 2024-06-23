@@ -1,0 +1,30 @@
+{
+    "apiVersion": 2,
+    "name": "faq-block/faq",
+    "title": "FAQ Block",
+    "category": "widgets",
+    "icon": "excerpt-view",
+    "description": "A block to display FAQs",
+    "keywords": [ "faq", "questions", "answers" ],
+    "supports": {
+        "html": false
+    },
+    "attributes": {
+        "selectedCategories": {
+            "type": "array",
+            "default": []
+        },
+        "selectedTags": {
+            "type": "array",
+            "default": []
+        },
+        "selectedFAQs": {
+            "type": "array",
+            "default": []
+        }
+    },
+    "textdomain": "faq",
+    "editorScript": "file:./index.js",
+    "editorStyle": "file:./index.css",
+    "style": "file:./style-index.css"
+}

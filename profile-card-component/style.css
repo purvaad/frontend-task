@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(185, 75%, 39%);
+    background-image: url("./images/bg-pattern-top.svg"), url("./images/bg-pattern-bottom.svg");
+    background-position: -320px -569px, 692px 353px;
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    font-family: "Kumbh Sans" , sans-serif;
+}
+
+.main{
+    display: flex;
+    /* width: 100%; */
+}
+
+.card{
+    display: flex;
+	flex-direction: column;
+	align-items: center;
+    text-align: center;
+    max-width: 350px;
+	max-height: 374px;
+	height: 100%;
+    width: 100%;
+	background-color: white;
+	text-align: center;
+    border-radius: 15px;
+    box-shadow: 0px 50px 100px -20px rgba(8, 70, 94, 0.50);
+}
+
+.card__bg-pattern img{
+    height: 140px;
+	width: 100%;
+	border-radius: 15px 15px 0 0;
+}
+.card__image{
+    height: 34px;
+}
+.card__image img{
+    position: relative;
+    width: 96px;
+    height: 96px;
+    top: -56px;
+    border-radius: 96px;
+    border: 5px solid #FFF;
+}
+
+.card__profile{
+    /* margin-top: 24px; */
+    padding-top: 24px;
+    text-align: center;
+
+}
+
+.name{
+    color: hsl(229, 23%, 23%);
+    font-size: 18px;
+    font-weight: 700;
+}
+.age{
+    color: hsl(227, 10%, 46%);
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.city{
+    color: hsl(227, 10%, 46%);
+    font-size: 14px;
+    font-weight: 400;
+    padding-top: 8px;
+}
+
+.card__divider{
+	height: 1px;
+	width: 100%;
+    /* background-color: hsl(0, 0%, 59%); */
+	background-color: #e8e9ec;
+	margin-top: 28px;
+}
+
+.card__info{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	gap: 46px;
+	padding: 24px;
+}
+
+.number {
+	font-size: 18px;
+	font-weight: 700;
+}
+
+.component{
+	font-size: 10px;
+	word-spacing: 1.5px;
+	padding-top: 9px;
+}
+
+/* mobile responsive */
+
+@media screen and (max-width: 767px) {
+	body {
+		background-position: -800px -490px, 170px 230px, 300px 300px;
+	}
+
+	.card{
+		max-width: 326px;
+		min-height: 374px;
+		border-radius: 15px 15px;
+	}
+
+	.card__info{
+		gap: 38px;
+	}
+}

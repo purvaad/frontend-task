@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="stylesheet" href="./styles/style.css">
+  <title>Frontend Mentor | Clock App</title>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="timer_wrapper">
+        <div class="clock_timer--content">
+          <div class="quote-wrapper">
+            <p class="quote"></p>
+            <p class="author"></p>
+          </div>
+          <div class="refresh-quote">
+            <img src="./assets/desktop/icon-refresh.svg" alt="Refresh">
+          </div>
+        </div>
+        
+
+        <div class="clock_timer--timmer">
+          <div class="img_txt-content">
+            <img src="./assets/desktop/icon-sun.svg" alt="">
+            <p>GOOD MORNING, IT'S CURRENTLY</p>
+          </div>
+          <div class="timmer">
+            <h2 class="time"></h2>
+            <p class="time-zone"></p>
+          </div>
+          <div class="timer_country">
+            <p class="country"></p>
+            <button type="button" class="btn">
+              MORE <img src="./assets/desktop/icon-arrow-up.svg" alt="arrow">
+            </button>
+          </div>
+        </div>
+
+        <div class="more_info hidden">
+          <div class="container">
+            <div class="timer_data">
+              <div class="left_content">
+                <div>
+                  <p>CURRENT TIMEZONE</p>
+                  <h2 class="timezone"></h2>
+                </div>
+                <div>
+                  <p>Day of the year</p>
+                  <h2 class="year-day"></h2>
+                </div>
+              </div>
+              <div class="right_content">
+                <div>
+                  <p>Day of the week</p>
+                  <h2 class="week_day"></h2>
+                </div>
+                <div>
+                  <p>Week number</p>
+                  <h2 class="week"></h2>
+                </div>
+                
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </header>
+  <script src="./script.js"></script>
+</body>
+</html>
+
